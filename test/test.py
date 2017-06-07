@@ -35,7 +35,8 @@ class Test:
                 reply = await self.bot.wait_for_message(30, channel=channel,
                         author=msg.author, content='yes')
                 if reply:
-                    await self._parse_champions_csv(msg, attachment)
+                    #await self._parse_champions_csv(msg, attachment)
+                    await self.bot.send_message(channel, "OK COOL")
                 else:
                     await self.bot.send_message(channel, "Did not import")
 
