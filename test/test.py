@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from .mcoc import class_color_codes
+#from .mcoc import class_color_codes
 from .utils.dataIO import dataIO
 from .utils.dataIO import fileIO
 from .utils import checks
