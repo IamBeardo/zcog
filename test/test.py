@@ -38,7 +38,7 @@ class Test:
                     #await self._parse_champions_csv(msg, attachment)
                     await self.bot.send_message(channel, "OK COOL")
                 else:
-                    await self.bot.send_message(channel, "Did not import")
+                    await self.bot.send_message(channel, "Did not import!!")
 
 
 
