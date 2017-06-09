@@ -31,7 +31,7 @@ class Test:
 
 
     @commands.command()
-    async def mycom(self, user : discord.Member):
+    async def mycom(self, user : discord.Member, *args):
         """This does stuff!"""
         
         #Your code will go here
