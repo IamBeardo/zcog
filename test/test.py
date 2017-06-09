@@ -35,11 +35,10 @@ class Test:
         """This does stuff!"""
         
         #Your code will go here
-        if type(user) = "<class 'discord.member.Member'>"
-        
+        if type(user) = "<class 'discord.member.Member'>":
             await self.bot.say("yes") 
-           
-        await self.bot.say("{}, {} {} ".format(user, type(user), args))
+        else:   
+            await self.bot.say("{}, {} {} ".format(user, type(user), args))
 
 
 
