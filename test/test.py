@@ -35,7 +35,7 @@ class Test:
         """This does stuff!"""
         
         #Your code will go here
-        await self.bot.say("{}, {} ".format(user, args))
+        await self.bot.say("{}, {} {} ".format(user, type(user), args))
 
 
 
