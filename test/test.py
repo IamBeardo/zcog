@@ -23,6 +23,24 @@ class Test:
         self.champ_re = re.compile(r'champ.*\.csv')
 
 
+
+    async def addUser(f):
+        async def inner():
+            pass
+        pass
+
+
+    @commands.command()
+    async def mycom(self, user : discord.Member):
+        """This does stuff!"""
+        
+        #Your code will go here
+        await self.bot.say(user)
+
+
+
+
+
     async def _on_attachment(self, msg):
         channel = msg.channel
         prefixes = tuple(self.bot.settings.get_prefixes(msg.server))
@@ -39,6 +57,8 @@ class Test:
                     await self.bot.send_message(channel, "OK fffCOOL")
                 else:
                     await self.bot.send_message(channel, "Did not import!!")
+
+
 
 
 
