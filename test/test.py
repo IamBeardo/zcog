@@ -36,7 +36,7 @@ class Test:
                         author=msg.author, content='yes')
                 if reply:
                     #await self._parse_champions_csv(msg, attachment)
-                    await self.bot.send_message(channel, "OK COOL")
+                    await self.bot.send_message(channel, "OK fffCOOL")
                 else:
                     await self.bot.send_message(channel, "Did not import!!")
 
