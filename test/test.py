@@ -25,12 +25,13 @@ class Test:
 
 
     async def addUser(f):
-        async def inner():
-            pass
-        pass
+        async def inner(*args):
+            f("APA",args)
+        return inner()
 
 
     @commands.command()
+    @addUser
     async def mycom(self, user : discord.Member = None, *args):
         """This does stuff!"""
         
