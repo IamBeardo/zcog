@@ -13,13 +13,27 @@ import requests
 import re
 
 class Test:
-
-
+    
+    warInfo = {}    
     def __init__(self, bot):
         self.bot = bot
         self.data_dir = 'data/test/users/{}/'
 
 
+    @commands.command(pass_context=True)
+    async def newwar(self, warName):
+        
+        self.warInfo = {
+        Name: ""
+        Kills {
+            
+            }
+    
+    
+        }
+
+        warInfo["Name"] = warName
+        await self.bot.say("New war created [{}]".format(warName))
 
     @commands.command(pass_context=True)
     async def mycom(self, ctx, user : discord.User = None):
