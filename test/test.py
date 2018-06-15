@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-#from .mcoc import class_color_codes
 from .utils.dataIO import dataIO
 from .utils.dataIO import fileIO
 from .utils import checks
@@ -19,28 +18,15 @@ class Test:
     def __init__(self, bot):
         self.bot = bot
         self.data_dir = 'data/test/users/{}/'
-        self.champs_file = self.data_dir + 'champs.json'
-        self.champ_re = re.compile(r'champ.*\.csv')
 
-
-
-    async def addUser(f):
-        async def inner(*args):
-            f("APA",args)
-        return inner()
 
 
     @commands.command()
-    @addUser
-    async def mycom(self, user : discord.Member = None, *args):
+    async def mycom(self,  *args):
         """This does stuff!"""
         
         #Your code will go here
-        #if type(user) == "discord.member.Member":
-        if isinstance(user,  discord.member.Member):
-            await self.bot.say("yes") 
-        else:   
-            await self.bot.say("{}, {} {} ".format(user, type(user), args))
+        await self.bot.say(" Wheeeeat ")
 
 
 
@@ -75,7 +61,7 @@ def check_folders():
 
 
 def setup(bot):
-    check_folders()
+    #check_folders()
     n = Test(bot)
     bot.add_cog(n)
-    bot.add_listener(n._on_attachment, name='on_message')
+    #bot.add_listener(n._on_attachment, name='on_message')
