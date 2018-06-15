@@ -21,7 +21,7 @@ class Test:
 
 
     @commands.command(pass_context=True)
-    async def newwar(self, warName):
+    async def newwar(self, ctx, warName):
         
         self.warInfo = {}
 
