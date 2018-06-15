@@ -21,15 +21,25 @@ class Test:
 
 
 
-    @commands.command()
-    async def mycom(self,  *args):
+    @commands.command(pass_context=True)
+    async def mycom(self, ctx, user : discord.User = None, *args):
         """This does stuff!"""
+        if user is None:
+            user=ctx.message.author
         
         #Your code will go here
-        await self.bot.say(args)
+        await self.bot.say(" User: {} args: {}".format(user,args))
 
 
-
+    #@roster.command(pass_context=True, name='template')
+    #async def _roster_template(self, ctx, *, user : discord.User = None):
+    #    '''Blank CSV template for champion import'''
+    #    if user is None:
+    #        user=ctx.message.author
+    #    message = 'Save a copy of the template (blue text):\'
+        
+        
+        
 
 
     async def _on_attachment(self, msg):
