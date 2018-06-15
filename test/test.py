@@ -23,14 +23,9 @@ class Test:
     @commands.command(pass_context=True)
     async def newwar(self, warName):
         
-        self.warInfo = {
-            Name: warName,
-            Kills: {
+        self.warInfo = {}
 
-            }
-        }
-
-        warInfo["Name"] = warName
+        self.warInfo["Name"] = warName
         await self.bot.say("New war created [{}]".format(warName))
 
     @commands.command(pass_context=True)
