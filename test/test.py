@@ -22,7 +22,7 @@ class Test:
     @commands.command(pass_context=True)
     async def renamewar(self, ctx, warName):
         pass
-        old = self.warinfo["Name"]
+        old = "olddd" #self.warinfo["Name"]
         await self.bot.say(" War [{}] renamed to [{}]".format(old, warName))
         
         
