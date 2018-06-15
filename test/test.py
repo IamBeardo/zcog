@@ -19,15 +19,25 @@ class Test:
         self.bot = bot
         self.data_dir = 'data/test/users/{}/'
 
-
     @commands.command(pass_context=True)
-    async def newwar(self, ctx, warName):
+    async def renamewar(self, ctx, warName):
+        pass
+        old, self.warinfo["Name"] = self.warinfo["Name"], warName
+        await self.bot.say(" War [{}] renamed to [{}]".format(old, warName))
+        
+        
+    @commands.command(pass_context=True)
+    async def startwar(self, ctx, warName):
         
         self.warInfo = {}
 
         self.warInfo["Name"] = warName
         await self.bot.say("New war created [{}]".format(warName))
 
+    @commands.command(pass_context=True)
+    async def endwar(self, ctx, warName):
+        pass
+    
     @commands.command(pass_context=True)
     async def mycom(self, ctx, user : discord.User = None):
         """This does stuff!"""
