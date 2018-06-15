@@ -28,7 +28,7 @@ class Test:
             user=ctx.message.author
         
         #Your code will go here
-        await self.bot.say(" User: {} args: {}".format(user.name, "APA"))
+        await self.bot.say(" User: {} args: {}".format(user.name, ctx.message.mentions))
 
 
     #@roster.command(pass_context=True, name='template')
