@@ -14,7 +14,7 @@ import re
 
 class Test:
     
-    warInfo = {}    
+    #warInfo = {}    
     def __init__(self, bot):
         self.bot = bot
         self.data_dir = 'data/test/users/{}/'
@@ -24,12 +24,10 @@ class Test:
     async def newwar(self, warName):
         
         self.warInfo = {
-        Name: ""
-        Kills: {
-            
+            Name: warName,
+            Kills: {
+
             }
-    
-    
         }
 
         warInfo["Name"] = warName
