@@ -26,7 +26,7 @@ class Test:
         """This does stuff!"""
         
         #Your code will go here
-        await self.bot.say(" Wheeeeat ")
+        await self.bot.say(args)
 
 
 
