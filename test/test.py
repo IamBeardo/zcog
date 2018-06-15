@@ -22,7 +22,7 @@ class Test:
 
 
     @commands.command(pass_context=True)
-    async def mycom(self, ctx,  *, user : discord.User = None):
+    async def mycom(self, ctx,  *args, user : discord.User = None):
         """This does stuff!"""
         if user is None:
             user=ctx.message.author
