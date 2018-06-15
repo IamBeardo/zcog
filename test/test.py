@@ -22,14 +22,13 @@ class Test:
 
 
     @commands.command(pass_context=True)
-    async def mycom(self, ctx, *, tst)
-                    #user : discord.User = None):
+    async def mycom(self, ctx, user : discord.User = None):
         """This does stuff!"""
         if user is None:
             user=ctx.message.author
         
         #Your code will go here
-        await self.bot.say(" User: {} args: {}".format(user.name, tst))
+        await self.bot.say(" User: {} args: {}".format(user.name, "APA"))
 
 
     #@roster.command(pass_context=True, name='template')
